@@ -9,7 +9,8 @@ PS1="\[\e[38;2;102;217;239m\][\A]\[\e[38;2;166;226;46m\]\u\[\e[0;m\]:\[\e[38;2;2
 alias source='source ~/.bashrc'
 alias ls='exa'
 alias la='exa -a -l'
-alias lg='exa -a -l --git --header'
+alias lg='exa -l --git --header'
+alias lga='exa -a -l --git --header'
 lt() {
     exa --tree --level=$1
 }
