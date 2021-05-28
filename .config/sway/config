@@ -63,6 +63,8 @@ input * {
     xkb_options ctrl:nocaps
 }
 
+default_border none
+gaps outer 10px
 
 ### Key bindings
 #
