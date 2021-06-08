@@ -1,0 +1,56 @@
+### Variables
+
+
+# Color Theme
+# uses the mononokai colors
+
+set $black   #3e3d32
+set $red     #f92672
+set $green   #a6e22e
+set $yellow  #e6db74
+set $blue    #66d9ef
+set $magenta #fd5ff0
+set $cyan    #a1efe4
+set $white   #cfcfc2
+
+set $foreground #cfcfc2
+set $background #272822
+
+set $none #000000
+
+# Logo key. Use Mod1 for Alt.
+set $mod Mod4
+
+# Home row direction keys, like vim
+set $left n
+set $up e
+set $down o
+set $right i
+
+
+# Your preferred terminal emulator
+set $term alacritty
+
+# Your preferred application launcher
+# Note: pass the final command to swaymsg so that the resulting window can be opened
+# on the original workspace that the command was run on.
+set $menu dmenu_path | dmenu | xargs swaymsg exec --
+
+# Dbus session
+set $dbus 'dbus-daemon --session --address=unix:path=$XDG_RUNTIME_DIR/bus'
+
+# Screen Locker
+set $locker 'swaylock --font mononoki -e -f -i ~/Images/Wallpapers/BgMonokai.png'
+
+### Idle configuration
+# This will lock your screen after 300 seconds of inactivity, then turn off
+# your displays after another 300 seconds, and turn your screens back on when
+# resumed. It will also lock your screen before your computer goes to sleep.
+
+exec swayidle -w \
+        timeout 300 'swaylock -f -c 000000' \
+        timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
+        before-sleep $locker
+
+set $screenshot grim - | wl-copy --type image/png
+set $areascreenshot grim -g "$(slurp)" - | wl-copy --type image/png

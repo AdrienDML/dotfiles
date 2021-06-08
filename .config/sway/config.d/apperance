@@ -1,0 +1,26 @@
+### Apperance
+include ~/.config/sway/config.d/vars
+# Gaps settings
+smart_gaps on
+gaps inner 1
+gaps outer 0
+
+# Border settings
+smart_borders on
+default_border pixel 2
+
+# Cursor Theme & size
+seat seat0 xcursor_theme LyraB-cursors 24
+
+
+
+# border - border around titlebar
+# bg - titlebar background
+# text - text on titlebar
+# indicator - shown where new window will open
+# child_border - border around the window
+# class			        border		bg		    text	   indicator	child_border
+client.focused		    $none	    $none	    $none	   $cyan	    $cyan
+client.focused_inactive $none	    $none	    $none	   $cyan    	$cyan
+client.unfocused	    $none	    $none	    $none	   $cyan	    $background
+client.urgent		    $none	    $none	    $none      $cyan	    $magenta
