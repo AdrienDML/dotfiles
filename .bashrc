@@ -26,3 +26,5 @@ mkcd() {
     cd $1
 }
 . "$HOME/.cargo/env"
+
+#eval "$(starship init bash)" 

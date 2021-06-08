@@ -4,6 +4,13 @@ include ~/.config/sway/config.d/vars
 # Basics:
 #
 
+    # Make a screenshot and copy to clipboard
+	bindsym Print exec $screenshot
+	bindsym Shift+Print exec $areascreenshot
+
+    # Start a browser window
+    bindsym $mod+b exec $browser
+    
     # Start a terminal
     bindsym $mod+Return exec $term
 
@@ -29,10 +36,10 @@ include ~/.config/sway/config.d/vars
 # Moving around:
 #
     # Move your focus around
-    #bindsym $mod+$left focus left
-    #bindsym $mod+$down focus down
-    #bindsym $mod+$up focus up
-    #bindsym $mod+$right focus right
+    bindsym $mod+$left focus left
+    bindsym $mod+$down focus down
+    bindsym $mod+$up focus up
+    bindsym $mod+$right focus right
     # Or use $mod+[up|down|left|right]
     bindsym $mod+Left focus left
     bindsym $mod+Down focus down
@@ -83,13 +90,13 @@ include ~/.config/sway/config.d/vars
     # You can "split" the current object of your focus with
     # $mod+b or $mod+v, for horizontal and vertical splits
     # respectively.
-    bindsym $mod+b splith
+    bindsym $mod+h splith
     bindsym $mod+v splitv
 
     # Switch the current container between different layout styles
     bindsym $mod+l layout stacking
     bindsym $mod+w layout tabbed
-    bindsym $mod+e layout toggle split
+    bindsym $mod+k layout toggle split
 
     # Make the current focus fullscreen
     bindsym $mod+f fullscreen
