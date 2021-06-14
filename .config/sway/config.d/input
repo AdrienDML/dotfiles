@@ -14,7 +14,7 @@
 
 input type:keyboard {
     xkb_layout "workman-p"
-    xkb_options ctrl:nocaps
+    xkb_options caps:swapescape 
 }
 
 input type:mouse {
