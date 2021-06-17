@@ -6,21 +6,5 @@ include ~/.config/sway/config.d/vars
 
 
 bar {
-    position top
-
-    # When the status_command prints a new line to stdout, swaybar updates.
-    # The default just shows the current date and time.
-    status_command while date +'%Y-%m-%d %l:%M:%S %p'; do sleep 1; done
-    
-    colors {
-        statusline $white
-        background $background
-        separator $blue
-        focused_workspace $blue $black $foreground
-        active_workspace $black $black $foreground
-    }
-    
-    font mononoki nerd font
-    height 16
-    mode dock
+	swaybar_command "waybar"	
 }

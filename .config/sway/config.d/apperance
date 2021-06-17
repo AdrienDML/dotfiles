@@ -1,9 +1,9 @@
 ### Apperance
 include ~/.config/sway/config.d/vars
 # Gaps settings
-smart_gaps on
-gaps inner 1
-gaps outer 0
+smart_gaps off 
+gaps inner 5 
+gaps outer 2 
 
 # Border settings
 smart_borders on

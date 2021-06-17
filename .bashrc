@@ -8,6 +8,7 @@ PS1="\[\e[38;2;102;217;239m\][\A]\[\e[38;2;166;226;46m\]\u\[\e[0;m\]:\[\e[38;2;2
 
 alias source='source ~/.bashrc'
 
+alias cam='mplayer tv://device=/dev/video01'
 ## ls aliiases
 alias ls='exa'
 alias la='exa -a -l'
@@ -27,7 +28,7 @@ mkcd() {
     mkdir $1
     cd $1
 }
-
+# goes up one dir or the number of dir specified
 up(){
 	local d=""
 	limit=$1
@@ -99,4 +100,4 @@ alias mkgz='tar -cvzf'
 alias untar='tar -xvf'
 alias unbz2='tar -xvjf'
 alias ungz='tar -xvzf'
-#s[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+#[ -f ~/.fzf.bash ] && source ~/.fzf.bash
