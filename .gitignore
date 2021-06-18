@@ -1,4 +1,6 @@
 ./**
 **
 !.bashrc
-!.config
+!.config/**
+!.bash_profile
+ 
