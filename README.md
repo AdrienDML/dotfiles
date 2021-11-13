@@ -1,14 +1,13 @@
 # My dot files configs + all the tools I use
-Here is a list of all the program / tools i use on m arch machine.
+Here is a list of all the program / tools i use on my arch machine.
 
 ## Deskop Environement
 All the utilities i use for the windowing & notification, ect ...
-
 ### Window Manager
-sway
+sway + waybar
 
 ### Application launcher 
-dmenu
+rofi
 
 ### Clipboard
 wl-clipboard
@@ -16,19 +15,22 @@ wl-clipboard
 ### Notification Daemon
 mako
 
-### Status Bar
-waybar
-
 ### Audio mixer
 alsamixer-utils
+
+### Network
+systemd-resolved
+iwctl
 
 ### Screen shotter
 grim + slurp
 
-## Softwares
+### Screen luminosity
+clight
 
+## Softwares
 ### Terminal
-allacritty
+kitty
 
 ### Browser
 firefox
@@ -39,12 +41,17 @@ Discord
 #### Code Editor
 VSCode 
 nvim
+coq
+Idea
+obsidian
 
 ### Image Viewer
-imv
+imv + vlc
+
+### screen capture
+obs-studio
 
 ## Terminal Utils
-
 ### Shell
 classic bash
 
@@ -57,8 +64,6 @@ ripgrep
 ### ls replacement
 exa
 
-### AUR helper
+### AUR helper + packages
 paru
-
-### Multiplexer
-zellij (multiplexer)
+snap
