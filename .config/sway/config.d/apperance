@@ -6,7 +6,7 @@ gaps inner 5
 gaps outer 2 
 
 # Border settings
-smart_borders on
+smart_borders off 
 default_border pixel 2
 
 # Cursor Theme & size
@@ -20,7 +20,7 @@ seat seat0 xcursor_theme LyraB-cursors 30
 # indicator - shown where new window will open
 # child_border - border around the window
 # class			        border		bg		    text	           indicator	child_border
-client.focused		    $cyan	    $blue	    $background   	   $cyan	    $cyan
-client.focused_inactive $cyan	    $blue	    $background   	   $cyan    	$cyan
-client.unfocused	    $cyan	    $blue	    $background   	   $cyan	    $background
-client.urgent		    $cyan	    $blue	    $background        $cyan	    $magenta
+client.focused		    $cyan       $blue       $background   	   $green       $magenta
+client.focused_inactive $white      $blue	    $background   	   $green       $white
+client.unfocused	    $white      $blue	    $background   	   $green       $white
+client.urgent		    $red        $blue	    $background        $green       $magenta

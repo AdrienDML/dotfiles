@@ -6,7 +6,10 @@
 [[ $- != *i* ]] && return
 PS1="\[\e[38;2;102;217;239m\][\A]\[\e[38;2;166;226;46m\]\u\[\e[0;m\]:\[\e[38;2;253;95;240m\]\w\[\e[0;m\]\[\e[38;2;166;226;46m\]>\[\e[0;m\] "
 
-alias source='source ~/.bashrc'
+alias src='source ~/.bashrc'
+config(){
+    cd ~/.config/$1
+}
 
 alias cam='mplayer tv://device=/dev/video01'
 ## ls aliiases
@@ -14,20 +17,39 @@ alias ls='exa'
 alias la='exa -a -l'
 alias lg='exa -l --git --header'
 alias lga='exa -a -l --git --header'
-lt() {
+lt(){
     exa --tree --level=$1
 }
 
-ltg() {
+ltg(){
     dir=${1:-'.'}
     exa $dir --tree --long --git --header
 }
 
 # usefull directories comand
-mkcd() {
+mkcd(){
     mkdir $1
     cd $1
 }
+
+md(){
+	sudo mkdir /mnt/d
+	sudo mount -t ntfs-3g /dev/sdb1 /mnt/d
+}
+
+umd(){
+	sudo umount /dev/sdb1
+	sudo rmdir /mnt/d
+}
+
+ssh-init(){
+    eval "$(ssh-agent)"
+    if [ -f ~/.ssh/$1 ]; then
+        ssh-add ~/.ssh/$1
+    fi
+}
+
+
 # goes up one dir or the number of dir specified
 up(){
 	local d=""
@@ -43,9 +65,13 @@ up(){
 	cd $d
 }
 
+# add cargo binaries to path
+PATH=~/.cargo/bin:$PATH
+PATH=~/.local/bin:$PATH
+PATH=~/.config/emacs/bin/:$PATH
 
-. "$HOME/.cargo/env"
-
+# neovim as a man pager
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 # man pages colored
 export LESS_TERMCAP_mb=$'\E[01;31m'
 export LESS_TERMCAP_md=$'\E[01;31m'
@@ -93,6 +119,7 @@ extract () {
 	done
 }
 
+export EDITOR=nvim
 # Alias's for archives
 alias mktar='tar -cvf'
 alias mkbz2='tar -cvjf'
@@ -101,3 +128,4 @@ alias untar='tar -xvf'
 alias unbz2='tar -xvjf'
 alias ungz='tar -xvzf'
 #[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+eval "$(starship init bash)"

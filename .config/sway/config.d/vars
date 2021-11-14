@@ -4,10 +4,10 @@
 # Color Theme
 # uses the mononokai colors
 
-set $black   #3e3d32
-set $red     #f92672
-set $green   #a6e22e
-set $yellow  #e6db74
+set $black   #1a181a
+set $red     #f85e84
+set $green   #9ecd6f
+set $yellow  #e5c463
 set $blue    #66d9ef
 set $magenta #fd5ff0
 set $cyan    #a1efe4
@@ -22,28 +22,28 @@ set $none #000000
 set $mod Mod4
 
 # Home row direction keys, like vim
-set $left n
-set $up e
-set $down o
-set $right i
+set $left h
+set $up t
+set $down k
+set $right l
 
 
 # Your preferred terminal emulator
-set $term alacritty
+set $term kitty 
 
 # Browser
-set $browser brave
+set $browser firefox
 
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $menu dmenu_path | dmenu | xargs swaymsg exec --
+set $menu rofi -show run
 
 # Dbus session
 set $dbus 'dbus-daemon --session --address=unix:path=$XDG_RUNTIME_DIR/bus'
 
 # Screen Locker
-set $locker 'swaylock --font mononoki -e -f -i ~/Images/Wallpapers/BgMonokai.png'
+set $locker 'swaylock --font mononoki -e -f' 
 
 ### Idle configuration
 # This will lock your screen after 300 seconds of inactivity, then turn off

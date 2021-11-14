@@ -3,6 +3,11 @@ Here is a list of all the program / tools i use on my arch machine.
 
 ## Deskop Environement
 All the utilities i use for the windowing & notification, ect ...
+
+### Greeter
+greetd
+wlgreet
+
 ### Window Manager
 sway + waybar
 
@@ -38,7 +43,7 @@ firefox
 ### Messaging / Call
 Discord
 
-#### Code Editor
+### Code Editor
 VSCode 
 nvim
 coq
@@ -50,6 +55,10 @@ imv + vlc
 
 ### screen capture
 obs-studio
+
+### Music Production
+Rack
+Ardour
 
 ## Terminal Utils
 ### Shell

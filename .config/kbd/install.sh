@@ -1,1 +1,0 @@
-sudo cp ./workman-p /usr/share/X11/xkb/symbols/workman-p

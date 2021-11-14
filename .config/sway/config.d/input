@@ -26,5 +26,4 @@ input type:touchpad {
 	tap enabled
 	dwt enabled
 	tap_button_map lrm
-	natural_scroll enabled
 }
