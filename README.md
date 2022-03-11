@@ -4,18 +4,12 @@ Here is a list of all the program / tools i use on my arch machine.
 ## Deskop Environement
 All the utilities i use for the windowing & notification, ect ...
 
-### Greeter
-greetd
-wlgreet
 
 ### Window Manager
 sway + waybar
 
 ### Application launcher 
 rofi
-
-### Clipboard
-wl-clipboard
 
 ### Notification Daemon
 mako
@@ -25,13 +19,6 @@ alsamixer-utils
 
 ### Network
 systemd-resolved
-iwctl
-
-### Screen shotter
-grim + slurp
-
-### Screen luminosity
-clight
 
 ## Softwares
 ### Terminal
@@ -47,8 +34,6 @@ Discord
 VSCode 
 nvim
 coq
-Idea
-obsidian
 
 ### Image Viewer
 imv + vlc
@@ -75,4 +60,3 @@ exa
 
 ### AUR helper + packages
 paru
-snap
