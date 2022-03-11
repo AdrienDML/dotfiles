@@ -1,0 +1,36 @@
+format = """ [\uE0B6[$directory$git_branch$git_commit](bold 14 inverted)\uE0B4](14) $rust
+ $character
+"""
+
+right_format="""$time
+"""
+
+# Replace the "❯" symbol in the prompt with "➜"
+[character]                            # The name of the module we are configuring is "character"
+success_symbol = "[\uf444❯](bold green)"     # The "success_symbol" segment is being set to "➜" with the color "bold green"
+error_symbol = "[\uf444](bold red)"
+
+[directory]
+truncation_length = 3
+truncation_symbol = "../"
+style = "bold cyan"
+format = "[\uF07B $path ](bold 14 inverted)"
+truncate_to_repo = true
+
+[git_branch]
+symbol=""
+format="[\uE0b1 $symbol $branch](bold 14 inverted)"
+
+[git_commit]
+commit_hash_length = 7
+only_detached = false
+tag_disabled = false
+tag_symbol = " "
+format="[  $hash$tag](bold 14 inverted)"
+
+[rust]
+symbol=""
+format="[\uE0B6[$symbol ($version)](bold 9 inverted)\uE0B4](bold 9)"
+
+[fill]
+symbol = " "

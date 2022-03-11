@@ -1,0 +1,69 @@
+// Workman-P Keyboard Layout symbols for xkb on X.Org Server 7.x
+// 09-06-2010 OJ Bucao. https://workmanlayout.org
+
+partial alphanumeric_keys
+xkb_symbols "workman-p-fr" {
+
+    name[Group1]= "French (Workman-P)";
+
+    include "fr(nodeadkeys)"
+
+    // Alphanumeric section
+    key <AE01> {  [        exclam,          1 ] };
+    key <AE02> {  [            at,          2 ] };
+    key <AE03> {  [    numbersign,          3 ] };
+    key <AE04> {  [        dollar,          4,      EuroSign   ] };
+    key <AE05> {  [       percent,          5 ] };
+    key <AE06> {  [   asciicircum,          6 ] };
+    key <AE07> {  [     ampersand,          7 ] };
+    key <AE08> {  [      asterisk,          8 ] };
+    key <AE09> {  [     parenleft,          9 ] };
+    key <AE10> {  [    parenright,          0 ] };
+    key <AE11>	{ [         minus, underscore ]	};
+    key <AE12>	{ [         plus,      equal ]	};
+
+    key <AD01> { [     q,          Q,    adiaeresis,       Adiaeresis ] };
+    key <AD02> { [     d,          D,           eth,              ETH ] };
+    key <AD03> { [     r,          R,    registered,       registered ] };
+    key <AD04> { [     w,          W,         aring,            Aring ] };
+    key <AD05> { [     b,          B,             b,                B ] };
+    key <AD06> { [     j,          J,             j,                J ] };
+    key <AD07> { [     f,          F,   ucircumflex,      Ucircumflex ] };
+    key <AD08> { [     u,          U,        ugrave,           Ugrave ] };
+    key <AD09> { [     p,          P,    odiaeresis,       Odiaeresis ] };
+    key <AD10> { [ semicolon,       colon       ] };
+    key <AD11> { [ bracketleft,	    braceleft	] };
+    key <AD12> { [ bracketright,	braceright	] };
+
+
+    key <AC01> { [     a,          A,        agrave,           Agrave ] };
+    key <AC02> { [     s,          S,   acircumflex,      Acircumflex ] };
+    key <AC03> { [     h,          H,             h,                H ] };
+    key <AC04> { [     t,          T,         thorn,            THORN ] };
+    key <AC05> { [     g,          G,   icircumflex,      Icircumflex ] };
+    key <AC06> { [     y,          Y,   ecircumflex,      Ecircumflex ] };
+    key <AC07> { [     n,          N,        eacute,           Eacute ] };
+    key <AC08> { [     e,          E,        egrave,           Egrave ] };
+    key <AC09> { [     o,          O,   ocircumflex,      Ocircumflex ] };
+    key <AC10> { [     i,          I,    idiqeresis,       Idiqeresis ] };
+    key <AC11> {	[ apostrophe,	quotedbl	]	};
+
+    key <LSGT> { [  less,    greater, lessthanequal, greaterthanequal ] }; // < > ≤ ≥
+    key <AB01> { [     z,          Z,            ae,               AE ] };
+    key <AB02> { [     x,          X,            oe,               OE ] };
+    key <AB03> { [     c,          C,      ccedilla,         Ccedilla ] };
+    key <AB04> { [     v,          V,     copyright,             cent ] };
+    key <AB05> { [     m,          M,             m,                M ] };
+    key <AB06> { [     k,          K,             k,                K ] };
+    key <AB07> { [     l,          L,        oslash,         Ooblique ] };
+    key <AB08> { [ comma,	    less ] };
+    key <AB09> { [period,	greater	 ] };
+    key <AB10> { [ slash,	question ] };
+
+    key <BKSL> { [ backslash, bar ]	};
+    // End alphanumeric section
+
+    // key <CAPS> { [ BackSpace, Escape,     BackSpace,        BackSpace ] };
+
+    include "level3(ralt_switch)"
+};
