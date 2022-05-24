@@ -1,4 +1,5 @@
-# My dot files configs + all the tools I use
+# My dot files configs + all the tools I use **(OutDated)
+
 Here is a list of all the program / tools i use on my arch machine.
 
 ## Deskop Environement
